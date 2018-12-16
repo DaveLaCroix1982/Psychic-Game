@@ -1,4 +1,3 @@
-
 var wins = 0;
 var losses = 0;
 var guesses = 7;
@@ -16,21 +15,15 @@ console.log(cpuGuess);
 var restart = function() {
     guessesLeft = 7;
     guess = [];
-    function cpuGuess (){
-        
-    }
-    //var cpuGuess = cpuChoices[Math.floor(Math.random() * cpuChoices.length)];
+    cpuGuess = cpuChoices[Math.floor(Math.random() * cpuChoices.length)];
     //compGuess.push(cpuGuess);
-    //console.log(cpuGuess);
-    
-    function cpuGuess() {
+    console.log(cpuGuess);
+};
       
-    }
-}
     document.onkeyup = function(event) {
      var userGuess = event.key;
     guess.push(userGuess);
-    console.log(userGuess);
+    console.log("your guess", userGuess);
 
         
          if ((userGuess===cpuGuess) && (guessesLeft > 0)){
@@ -58,6 +51,6 @@ var restart = function() {
 
           document.querySelector("#game").innerHTML = html;
 
-        cpuChoices++;
+        //cpuChoices++;
  
     }
